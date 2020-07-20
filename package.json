@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "fix-code": "eslint src pages -c .eslintrc.js --fix --ext js,jsx"
+    "fix-code": "eslint --fix --ext .js,.vue src"
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
