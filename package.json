@@ -5,10 +5,14 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "fix-code": "eslint src pages -c .eslintrc.js --fix --ext js,jsx"
   },
   "dependencies": {
+    "bootstrap": "^4.5.0",
     "core-js": "^2.6.5",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
@@ -22,6 +26,7 @@
     "@vue/eslint-config-prettier": "^5.0.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
+    "eslint-plugin-html": "^6.0.2",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.12.0",
