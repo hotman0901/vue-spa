@@ -11,50 +11,8 @@
 
       選到號碼：{{ option.value }}
       <!-- 依照選單號碼 render -->
-      <div v-if="option.value === '1'">
-        <div class="jumbotron">
-          <h1 class="display-4">render 1</h1>
-          <p class="lead">
-            This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured
-            content or information.
-          </p>
-        </div>
-      </div>
-      <div v-else-if="option.value === '2'">
-        <div class="jumbotron">
-          <h1 class="display-4">render 2</h1>
-          <p class="lead">
-            This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured
-            content or information.
-          </p>
-        </div>
-      </div>
-      <div v-else-if="option.value === '3'">
-        <div class="jumbotron">
-          <h1 class="display-4">render 3</h1>
-          <p class="lead">
-            This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured
-            content or information.
-          </p>
-        </div>
-      </div>
-      <div v-else-if="option.value === '4'">
-        <div class="jumbotron">
-          <h1 class="display-4">render 4</h1>
-          <p class="lead">
-            This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured
-            content or information.
-          </p>
-        </div>
-      </div>
-      <div v-else-if="option.value === '5'">
-        <div class="jumbotron">
-          <h1 class="display-4">render 5</h1>
-          <p class="lead">
-            This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured
-            content or information.
-          </p>
-        </div>
+      <div v-if="option.value !== ''">
+        <Jumbotron :id="option.value" :title="`我是標題${option.value}`" />
       </div>
       <div v-else>
         <h1>沒選</h1>
@@ -67,12 +25,15 @@
 // @ is an alias to /src
 import Nav from "@/components/Nav.vue"
 import Slide from "@/components/Slide.vue"
+import Jumbotron from "@/components/Jumbotron.vue"
+
 
 export default {
   name: "home",
   components: {
     Nav,
-    Slide
+    Slide,
+    Jumbotron
   },
   data() {
     return {
